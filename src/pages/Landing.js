@@ -10,14 +10,14 @@ const Landing = () => {
       <div className="welcome__desc col">
         <h3 className="title">
           Imagine if <br />
-          <span>Twitter</span>
-          <br /> had events.{" "}
+          <span>Snapchat</span>
+          <br /> had events.
         </h3>
         <p className="desc">
           Easily host and share events with your friends across social media
         </p>
         <button
-          className="btn btn-block hidden"
+          className="btn btn-block show-btn show"
           onClick={() => navigate("create")}
         >
           🎉 Create my event
@@ -47,16 +47,16 @@ const Wrapper = styled.section`
     margin-bottom: 1rem;
   }
   .welcome__img {
-    padding: 4rem 6rem 2rem 6rem;
+    padding: 0.5rem 4rem 2rem 4rem;
   }
-  .hidden {
+  .show {
     display: none;
   }
   .title {
     margin: 0;
     color: var(--primary-500);
     font-weight: 900;
-    font-size: min(6vw, 6rem);
+    font-size: min(7vw, 6rem);
     text-transform: inherit;
     span {
       background-clip: text;
@@ -79,10 +79,7 @@ const Wrapper = styled.section`
   }
   @media (min-width: 800px) {
     align-items: center;
-    .btn {
-      width: 80%;
-      margin-left: auto;
-    }
+
     .welcome__desc {
       order: 2;
     }
@@ -97,8 +94,8 @@ const Wrapper = styled.section`
     .show-btn {
       display: none;
     }
-    .hidden {
-      display: flex;
+    .show {
+      display: inline-flex;
     }
   }
 `;
