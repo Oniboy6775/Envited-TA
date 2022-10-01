@@ -56,7 +56,7 @@ const Wrapper = styled.section`
     margin: 0;
     color: var(--primary-500);
     font-weight: 900;
-    font-size: min(7vw, 6rem);
+    font-size: min(7vw, 5rem);
     text-transform: inherit;
     span {
       background-clip: text;
