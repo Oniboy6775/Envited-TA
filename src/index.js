@@ -1,14 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "normalize.css";
+import "./index.css";
+import "./fonts/Helvetica-Bold.ttf";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter as Router } from "react-router-dom";
+import { AppProvider } from "./context/appContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import "react-datepicker/dist/react-datepicker.css";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Router>
+    <AppProvider>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </AppProvider>
+  </Router>
 );
 
 // If you want to start measuring performance in your app, pass a function
